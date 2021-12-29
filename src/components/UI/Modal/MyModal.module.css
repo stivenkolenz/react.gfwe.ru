@@ -5,7 +5,8 @@
   z-index: 9999;
   width: 100%;
   height: 100%;
-  max-width: 60vw;
+  max-width: 50vw;
+  max-width: 700px;
   max-height: 90vh;
   overflow: hidden auto;
   opacity: 0;
@@ -33,12 +34,42 @@
 }
 
 .myModal__title {
-  font-weight: 800;
-  font-size: 15px;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 15px 35px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #000;
 }
 
 .myModal__content {
   font-size: 16px;
   line-height: 1.44;
+  padding: 15px;
+}
+
+.myModal__backdrop {
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 900;
+  background-color: rgba(0, 0, 0, 0.45);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+.myModal.active + .myModal__backdrop {
+  opacity: 1;
+  visibility: visible;
 }
 /*# sourceMappingURL=MyModal.module.css.map */
