@@ -179,7 +179,26 @@ body {
 }
 
 .Post {
+	& + & {
+		margin-top: 25px;
+	}
 	display: block;
+	// .Post__title
+	&__title {
+		font-size: 18px;
+		text-transform: uppercase;
+		font-weight: 600;
+		border-left: 2px solid $black;
+		padding: 5px 15px;
+		position: relative;
+		&::before {
+			content: "#" attr(data-id);
+			position: absolute;
+			right: 100%;
+			display: block;
+			padding: 0 15px;
+		}
+	}
 	// .Post__content
 	&__content {
 		font-size: 20px;
@@ -206,5 +225,25 @@ body {
 		transition: all 500ms ease-in;
 		transform: translateX(-100%);
 		opacity: 0;
+	}
+}
+
+.Pagination {
+	margin-top: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1;
+		padding: 15px;
+		background: #dedede;
+		&.active {
+			background: $black;
+			color: $white;
+		}
 	}
 }

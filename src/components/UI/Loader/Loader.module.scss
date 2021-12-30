@@ -1,0 +1,28 @@
+.Loader {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
+	&::before {
+		content: "";
+		display: block;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		border: 3px dashed #ff0000;
+		animation: Loader infinite 1s linear;
+	}
+}
+
+@keyframes Loader {
+	from {
+		transform: rotate(0deg) scale(1);
+	}
+	50% {
+		transform: rotate(180deg) scale(1.5);
+	}
+	to {
+		transform: rotate(360deg) scale(1);
+	}
+}

@@ -14,7 +14,7 @@ const PostList = function ({ posts, title, remove }) {
 				{posts.map((post, index) => {
 					return (
 						<CSSTransition key={post.id} timeout={500} classNames="Post">
-							<PostItem remove={remove} number={index + 1} post={post} />
+							<PostItem remove={remove} id={index + 1} post={post} />
 						</CSSTransition>
 					);
 				})}
